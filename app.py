@@ -13,6 +13,8 @@ Years_experience = st.number_input("Years of Experience", min_value=0, max_value
 
 Skill_match_score = st.number_input("Skill Match Score (0-100)", min_value=0, max_value=100, value=50)
 
+Education_level = st.selectbox("Education Level", options=["High School", "Bachelor's", "Master's"])
+
 Projects_count = st.number_input("Number of Projects", min_value=0, max_value=100, value=1)
 
 Resume_length = st.number_input("Resume Length (in pages)", min_value=1, max_value=20, value=1)
@@ -20,9 +22,18 @@ Resume_length = st.number_input("Resume Length (in pages)", min_value=1, max_val
 Github_activity = st.number_input("GitHub Activity Score (0-100)", min_value=0, max_value=100, value=50)
 
 if st.button("Predict Suitability"):
+
+    education_map = {
+        "Bachelor's": 0,
+        "High School": 1,
+        "Master's": 2
+    }
+    Education_level = education_map[Education_level]
+    
     prediction = model.predict([[ 
         Years_experience,
         Skill_match_score,
+        Education_level,
         Projects_count,
         Resume_length,
         Github_activity
