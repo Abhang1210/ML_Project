@@ -1,4 +1,4 @@
-# AI-Based Resume Screening System
+# Resume Screening System
 
 ## 1. Project Title
 **Resume Screening using Machine Learning**
