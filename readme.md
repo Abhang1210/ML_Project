@@ -45,10 +45,7 @@ To prepare resume text for modeling, standard NLP preprocessing steps are applie
 - Lowercasing text
 - Removing punctuation and special characters
 - Stop-word removal
-- Tokenization
-- Text vectorization using:
-  - TF-IDF Vectorizer
-  - Count Vectorizer (if required)
+
 
 ---
 
@@ -64,9 +61,6 @@ EDA helps understand dataset structure and guides model selection.
 
 ### 5.4 Feature Engineering
 - Conversion of resume text into numerical features
-- Techniques used:
-  - TF-IDF Vectorization
-  - N-grams
 - Target variable encoded using **Label Encoding**
 
 ---
@@ -74,16 +68,15 @@ EDA helps understand dataset structure and guides model selection.
 ### 5.5 Model Building
 Multiple classification algorithms suitable for text classification are considered:
 - Logistic Regression
-- Naive Bayes
-- Support Vector Machine (SVM)
+- Decison Tree
 - Random Forest (optional)
 
 ---
 
 ### 5.6 Model Training
 - Dataset split into:
-  - Training set
-  - Testing set
+  - Training set 80%
+  - Testing set 20%
 - Model trained on training data
 - Hyperparameter tuning applied where required
 
